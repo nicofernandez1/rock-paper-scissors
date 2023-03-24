@@ -34,18 +34,18 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    }
-    if (playerScore > computerScore) {
-        return "You Won the Game!";
-    } else if (computerScore > playerScore) {
-        return "You Lost the Game!";
-    } else {
-        return "It's a Tie!";
-    }
-}
+//function game() {
+    //for (let i = 0; i < 5; i++) {
+        //console.log(playRound(getPlayerChoice(), getComputerChoice()));
+    //}
+    //if (playerScore > computerScore) {
+        //return "You Won the Game!";
+    //} else if (computerScore > playerScore) {
+        //return "You Lost the Game!";
+    //} else {
+        //return "It's a Tie!";
+    //}
+//}
 
 console.log(game());
 console.log(playerScore);
