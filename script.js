@@ -6,10 +6,10 @@ function getComputerChoice() {
     return object[Math.floor(Math.random() * 3)];
 }
 
-function getPlayerChoice() {
-    let choice = prompt("Rock, Paper, Scissors?");
-    return choice.toLowerCase();
-}
+//function getPlayerChoice() {
+    //let choice = prompt("Rock, Paper, Scissors?");
+    //return choice.toLowerCase();
+//}
 
 function playRound(playerSelection, computerSelection) {
     let result = "";
@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
     } else {
         result = "Tie!"
     }
-    return result;
+    console.log(result);
 }
 
 //function game() {
@@ -47,6 +47,20 @@ function playRound(playerSelection, computerSelection) {
     //}
 //}
 
-console.log(game());
-console.log(playerScore);
-console.log(computerScore);
+//console.log(game());
+//console.log(playerScore);
+//console.log(computerScore);
+
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+
+rock.addEventListener('click', function() {
+    playRound("rock", getComputerChoice());
+});
+paper.addEventListener('click', function() {
+    playRound("paper", getComputerChoice());
+});
+scissors.addEventListener('click', function() {
+    playRound("scissors", getComputerChoice());
+});
